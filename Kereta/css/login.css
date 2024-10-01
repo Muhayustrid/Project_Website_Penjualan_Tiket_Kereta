@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #EEEEEE;
+    font-family: "Inter", sans-serif;
+}
+
+.container-login,
+.container-Daftar {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    max-width: 450px;
+}
+.container-Daftar {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+form {
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all .3s ease;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    font-size: 11px;
+    background-color: #fff;
+    padding: 0 5px;
+    color: #999;
+    transition: all .3s ease;
+}
+
+input:focus + label,
+input:valid + label,
+input[type="date"]:valid + label,
+select:focus + label,
+select.filled + label {
+    font-size: 10px;
+    top: -5px;
+}
+
+input:focus + label,
+select:focus + label {
+    color: blue;
+}
+
+input:focus,
+select:focus {
+    border-color: blue;
+    outline: 1px solid blue;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0E4EB5;
+    margin-bottom: 15px;
+}
+
+.Daftar,
+.Masuk {
+    width: 180px;
+    height: 35px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.Daftar {
+    background-color: #fff;
+    color: #0E4EB5;
+    border: 1px solid #0E4EB5;
+}
+
+.Masuk {
+    background-color: #0E4EB5;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.remember-me .remember-label {
+    position: static; /* Prevents the label from positioning absolutely */
+    font-size: 12px; /* Match the font size with "Lupa Password?" */
+    color: #999;
+    font-weight: normal; /* Ensure the font is not bold */
+}
+
+.forgot-password a {
+    color: #0E4EB5;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    body {
+        zoom: 0.8;
+    }
+
+    .container-login,
+    .container-Daftar {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        font-size: 12px;
+        height: 30px;
+        padding: 0 8px;
+    }
+
+    label {
+        font-size: 10px;
+        top: 8px;
+    }
+
+    .Daftar,
+    .Masuk {
+        width: 150px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .forgot-password a {
+        font-size: 10px;
+    }
+
+    .remember-forgot {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .remember-me {
+        margin-top: 10px;
+    }
+}
