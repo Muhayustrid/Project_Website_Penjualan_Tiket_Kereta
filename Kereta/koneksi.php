@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "keretaapi";
+$dbname = "kereta_api";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

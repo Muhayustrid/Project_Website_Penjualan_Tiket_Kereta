@@ -1,35 +1,57 @@
-# Dokumentasi Proyek Anda
+# Healing.com - Website Pemesanan Tiket Kereta Api
 
-## 1. Deskripsi
+## Deskripsi
+Healing.com adalah aplikasi web pemesanan tiket kereta api secara online. Pengguna dapat registrasi, login, melihat jadwal kereta, melakukan reservasi, dan mengelola tiket yang sudah dipesan.
 
-Proyek ini adalah aplikasi yang dirancang untuk membantu pengguna memahami **bias pada AI**. Berikut adalah diagram arsitektur sistem:
+## Fitur Utama
+- Registrasi dan login pengguna.
+- Reservasi tiket kereta api.
+- Lihat jadwal kereta.
+- Kelola data pembelian/tiket.
+- Dashboard admin untuk mengelola penumpang, kereta, jadwal, stasiun, dan pembelian.
 
-![Diagram Sistem](images/diagram.png)
+## Teknologi
+- PHP (native)
+- MySQL / MariaDB
+- HTML, CSS, JavaScript
+- Bootstrap 4
 
-## 2. Fitur Utama
+## Struktur Singkat Project
+- `Kereta/` : source code aplikasi web.
+- `images/` : screenshot tampilan aplikasi.
+- `keretaapi.sql` / `Kereta/kereta_api.sql` : dump database.
 
-- **Penggunaan Mudah**: Aplikasi ini dirancang dengan antarmuka pengguna yang sederhana dan intuitif.
-- **Visualisasi Interaktif**: Berikut adalah contoh visualisasi yang dihasilkan oleh aplikasi:
+## Cara Menjalankan (Local)
+1. Letakkan project di folder web server (contoh `htdocs` pada XAMPP).
+2. Jalankan Apache dan MySQL.
+3. Buat database baru bernama `kereta_api`.
+4. Import salah satu file SQL:
+   - `keretaapi.sql`, atau
+   - `Kereta/kereta_api.sql`
+5. Pastikan konfigurasi koneksi database di `Kereta/koneksi.php` sesuai:
+   - host: `localhost`
+   - user: `root`
+   - password: `` (kosong/default XAMPP)
+   - database: `kereta_api`
+6. Akses aplikasi melalui browser:
+   - Landing page: `http://localhost/Project_Website_Penjualan_Tiket_Kereta/Kereta/index.html`
+   - Login page: `http://localhost/Project_Website_Penjualan_Tiket_Kereta/Kereta/login.php`
 
-  ![Contoh Visualisasi](https://example.com/visualization.png)
+## Akun Admin Default
+- Email: `admin@admin.com`
+- Password: `admin`
 
-## 3. Cara Menggunakan
+## Screenshot Aplikasi
+> Screenshot diambil dari folder `images`.
 
-Untuk menggunakan aplikasi, ikuti langkah berikut:
+### Home
+![Home](images/home.png)
 
-1. Install dependensi menggunakan `npm install`.
-2. Jalankan aplikasi menggunakan `npm start`.
+### Reservasi
+![Reservasi](images/reservation.png)
 
-Berikut adalah contoh animasi aplikasi yang sedang berjalan:
+### Jadwal
+![Jadwal](images/jadwal.png)
 
-![Demo Aplikasi](images/demo.gif)
-
-## 4. Screenshot
-
-Di bawah ini adalah screenshot aplikasi setelah berhasil dijalankan:
-
-![Tampilan Aplikasi](images/screenshot.png)
-
-## 5. Lisensi
-
-Proyek ini dilisensikan di bawah MIT License.
+### Jadwal (Detail)
+![Jadwal Detail](images/jadwal_1.png)

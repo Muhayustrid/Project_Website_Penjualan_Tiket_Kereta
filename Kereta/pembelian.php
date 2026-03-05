@@ -70,7 +70,8 @@ $id_penumpang = $_SESSION['id_penumpang'];
                             echo '<td>' . $row['asal'] . '</td>';
                             echo '<td>' . $row['tujuan'] . '</td>';
                             echo '<td>' . $row['waktu_keberangkatan'] . '</td>';
-                            echo '<td>Rp ' . number_format($row['biaya'], 0, ',', '.') . '</td>';
+                            $biaya = isset($row['biaya']) ? (float) $row['biaya'] : 0;
+                            echo '<td>Rp ' . number_format($biaya, 0, ',', '.') . '</td>';
                             echo '<td>' . 'KA' . $row['nomor_gerbong'] . '/' . $row['nomor_kursi'] . '</td>';
                             
                             // Check if the train departure time is before the current time
